@@ -1,0 +1,10 @@
+.modal-dialog-wrapper-outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-dialog-wrapper-inner {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -1,0 +1,15 @@
+Адрес ПУА: https://cp.beget.com
+Имя пользователя: x67582pz
+Пароль: G2SV5MJc
+Сервер: free11
+
+FTP
+host free11.beget.com
+login x67582pz_1
+pass G2SV5MJc
+
+DB
+name x67582pz_1
+login x67582pz_1
+pass G2SV5MJc
+

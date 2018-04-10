@@ -1,0 +1,47 @@
+<!--
+        <?php foreach ($lastPhotos as $index => $photo) { ?>
+            <div class="col-lg-4">
+                <?= Html::a(
+                    '<img id="photo_id'.$photo->getId()
+                    .'" src="'.$photo->getImageUrl([180, 180])
+                    .'" alt="Photo 1"'
+                    .'" data-id="'.$photo->getId()
+                    .'" />',
+                    ['#'],
+                    [
+                        'data-toggle' => 'modal',
+                        'data-target' => '#show_photo'
+                    ]
+                ) ?>
+            </div>
+        <?php } ?> -->
+
+
+<?php $dataProvider = new ActiveDataProvider([
+    'query' => Photo::find()->orderBy('createdAt desc'),
+    'pagination' => [
+        'pageSize' => 3,
+    ],
+]);
+?>
+
+
+неправильно (не показывает при щелчке):
+
+<a data-target="#show_photo" data-toggle="modal" href="/index.php?r=albums%2F%23">
+
+<img id="photo_id125" data-id="125" "="" alt="Photo 1" src="/images/O9pt-JIAxHyfPI6Ayj-fsNkYtaBNoopH_180_180.png">
+
+
+неправильно (при щелчке показывает последнюю правильную картинку):
+
+<a data-target="#show_photo" data-toggle="modal" href="/index.php?r=albums%2F%23">
+
+<img id="photo_id126" data-id="126" "="" alt="Photo 1" src="/images/gT3aM83iIwQLwyeODcZOXXNF7CjAWPIg_180_180.png">
+
+
+правильно:
+
+<a data-target="#show_photo" data-toggle="modal" href="/index.php?r=albums%2F%23">
+
+<img id="photo_id131" data-id="131" "="" alt="Photo 1" src="/images/Zmz2wTvORYMS5okzynLKhy4yGV4Ilqtz_180_180.png">
